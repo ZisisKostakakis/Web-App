@@ -5,6 +5,7 @@ from PIL import Image
 from deta import Deta
 import streamlit as st
 
+deta = Deta(st.secrets["deta_key"])
 
 
 #Connect to Deta Base
