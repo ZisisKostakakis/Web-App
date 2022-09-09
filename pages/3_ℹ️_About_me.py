@@ -2,6 +2,13 @@ from pathlib import Path
 from platform import platform
 from PIL import Image
 import streamlit as st
+# import boto3
+# from botocore.exceptions import ClientError
+
+#reading from aws s3
+# s3 = boto3.resource('s3')
+# s3_object = s3.Bucket('zisis-web').Object('cv.pdf').get()
+# pdf = s3_object['Body'].read()
 
 # --- Path Settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -30,11 +37,14 @@ st.set_page_config(page_title = PAGE_TITLE, page_icon = PAGE_ICON)
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 with open(resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-icon_pic = Image.open(icon_pic).rotate(180)
-
-    
-
+    try:
+        PDFbyte = pdf_file.read()
+    except:
+        pass
+try:
+    icon_pic = Image.open(icon_pic).rotate(180)
+except:
+    pass
 
 # --- Hero Section
 col1, col2 = st.columns(2, gap="small")
