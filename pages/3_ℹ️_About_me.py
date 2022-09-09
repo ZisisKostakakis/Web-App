@@ -1,25 +1,13 @@
 from pathlib import Path
 from platform import platform
 from PIL import Image
-
-from deta import Deta
 import streamlit as st
-
-deta = Deta(st.secrets["deta_key"])
-
-
-#Connect to Deta Base
-# deta = Deta(st.secrets["deta_key"])
-# db = deta.Base("streamlit")
-
 
 # --- Path Settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "cv.pdf"
 icon_pic = current_dir / "assets" / "icon.png"
-
-
 
 # --- General Settings
 PAGE_TITLE = "Digital Resume | Zisis Kostakakis"
