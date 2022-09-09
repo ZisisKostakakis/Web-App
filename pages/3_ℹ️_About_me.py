@@ -8,8 +8,8 @@ import streamlit as st
 
 
 #Connect to Deta Base
-deta = Deta(st.secrets["deta_key"])
-db = deta.Base("streamlit")
+# deta = Deta(st.secrets["deta_key"])
+# db = deta.Base("streamlit")
 
 
 # --- Path Settings
