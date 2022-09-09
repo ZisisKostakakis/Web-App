@@ -2,7 +2,7 @@ from pathlib import Path
 from platform import platform
 from PIL import Image
 
-from deta import Deta
+# from deta import Deta
 import streamlit as st
 
 
