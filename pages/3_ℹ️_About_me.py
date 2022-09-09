@@ -1,8 +1,12 @@
 from pathlib import Path
 from platform import platform
+from deta import Deta
 
 import streamlit as st
 from PIL import Image
+
+#Connect to Deta Base
+deta = Deta(st.secrets["deta_key"])
 
 # --- Path Settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
