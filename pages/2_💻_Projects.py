@@ -8,6 +8,8 @@ from pandas.api.types import (
 )
 
 st.title("Auto Filter Dataframes")
+st.write("Given a public dataframe, you can filter using the checkboxe and sidebar")
+st.write("Dataframe: https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv")
 
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
