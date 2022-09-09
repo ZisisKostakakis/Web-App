@@ -18,7 +18,7 @@ css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "cv.pdf"
 icon_pic = current_dir / "assets" / "icon.png"
 
-db.insert(resume_file)
+
 
 # --- General Settings
 PAGE_TITLE = "Digital Resume | Zisis Kostakakis"
