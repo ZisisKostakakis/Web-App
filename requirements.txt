@@ -1,3 +1,3 @@
-deta==v1.3.3-beta x86_64-darwin
+deta==v1.3.3-beta
 gunicorn==19.9.0
 
